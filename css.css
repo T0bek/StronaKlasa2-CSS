@@ -1,0 +1,270 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    grid-template-areas: 
+    'h h h h h h h h h h h h'
+    'c c c c c c c c c c c c'
+    'c c c c c c c c c c c c'
+    'c c c c c c c c c c c c'
+    'c c c c c c c c c c c c'
+    'l l l l l l l b p p p p'
+    'l l l l l l l b p p p p'
+    'l l l l l l l b p p p p'
+    'l l l l l l l b p p p p'
+    'l l l l l l l b p p p p'
+    'f f f f f f f f f f f f';
+    
+}
+
+
+.menu{
+    grid-area: h;
+    display: flex;
+    align-items: center;
+    margin: 3vh;
+    margin-left: 12vh;
+    margin-right: 12vh;
+    background-image: linear-gradient(#45494d, #000000);
+    color: #feae31;
+    padding: 1vh;
+    border-radius: 10px;
+}
+
+.content{
+    background-image: linear-gradient(#45494d, #000000);
+    color: #ffffff;
+    margin-left: 12vh;
+    padding: 2vh;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-bottom: 4px;
+}
+
+.zdjecie{
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+h4, h2{
+    color: #feae31;
+}
+
+h4{
+    font-weight: normal;
+}
+
+h4:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.right{
+    background-color: #ffffff;
+    text-align: center;
+    margin-right: 6vw;
+}
+
+.prawy{
+    display: inline-block;
+    grid-area: p;
+    background-color: #ffffff;
+    margin-right: 12vh;
+    padding: 1vh;
+}
+
+.box{
+    grid-area: b;
+    background-color: #ffffff;
+    width: 2vh;
+}
+
+
+.left{
+    grid-area: l;
+    background-color: #ffffff;
+    margin-left: 12vh;
+    padding: 2vh;
+}
+
+
+.footer{
+    grid-area: f;
+    background-color: #ffffff;
+    text-align: center;
+    margin-left: 12vh;
+    margin-right: 12vh;
+    height: 20vh;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.ckziu{
+    float: left;
+    width: 53vw;
+}
+
+.ckziu h1:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.head{
+    float: left;
+    height: 7vh;
+    width: 16vh;
+    position: relative
+}
+
+.head p{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.img{
+    float: left;
+}
+
+.head:hover{
+    color: black;
+    background-image: linear-gradient(#efe457, #feae31 );
+    cursor: pointer;
+}
+
+.opcje:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.mb{
+    grid-area: c;
+    display: flex;
+}
+
+
+
+@media only screen and (max-width:1100px){
+    .mb{
+        width: 100vw;
+        height: 62vh;
+    }
+    .zdjecie{
+        height: 61.4vh;
+    }
+}
+@media only screen and (max-width:600px){
+    .container{
+        display: grid;
+        height: 200vh;
+        width: 100vw;
+        grid-template-areas: 
+        'h h h h'
+        'c c c c'
+        'c c c c'
+        'r r r r'
+        'r r r r'
+        'p p p p'
+        'p p p p'
+        'l l l l'
+        'l l l l'
+        'f f f f';
+        
+    }
+    
+    
+    .menu{
+        grid-area: h;
+        width: 100vw;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 5px;
+    }
+    .content{
+        grid-area: c;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 10px;
+        margin: 0;
+        padding: 5px;
+    }
+    
+    .zdjecie{
+        width: 100vw;
+        height: 40vh;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .linia{
+        width: 100vw;
+        height: 2px;
+        background-color: black;
+        margin: 0;
+        padding: 0;
+    }
+    .br{
+        display: none;
+    }
+    .right{
+        grid-area: r;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .prawy{
+        display: inline-block;
+        grid-area: p;
+        background-color: #ffffff;
+        margin: 10px;
+        padding: 0;
+    }
+    
+    .box{
+        display: none;
+    }
+    
+    
+    .left{
+        grid-area: l;
+        background-color: #ffffff;
+        margin: 10px;
+        padding: 0;
+        width: 100vw;
+    }
+
+    .ft{
+        display: none;
+    }
+
+    .mb{
+        display: block;
+        margin: 10px;
+        width: 100vw;
+        height: 75vh;
+    }
+
+    .footer{
+        grid-area: f;
+        background-color: #ffffff;
+        text-align: center;
+        margin: 10px;
+        padding: 0;
+        width: 100vw;
+    }
+}
+
